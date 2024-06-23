@@ -169,8 +169,10 @@
       column-gutter: 0pt,
       row-gutter: 50pt,
       image(univ_logo, width: univ_logo_scale),
+      align(horizon,
       text(title_font_size, title + "\n\n") + 
-      text(authors_font_size, emph(authors) + "\n" + "Ghent University, University of Milan"),
+      text(authors_font_size, emph(authors) + "\n")+
+      text(20pt, "Ghent University, Università degli Studi di Milano, Kharkiv Institute of Physics and Technology")),
     )
   )
 
