@@ -30,8 +30,6 @@
 #let box_color = luma(200)
 
 = Definition
-(Following *[Cirac et. al. 2021]*)
-
 Projected Entangled Pair States (PEPS) are a class of tensor network states that efficiently parametrise quantum states with finite entanglement. They are a generalization of Matrix Product States (MPS).
 
 #align(horizon)[
@@ -86,8 +84,7 @@ Projected Entangled Pair States (PEPS) are a class of tensor network states that
   ]
 )
 ]
-
-
+*[Cirac et. al. 2021]*
 = Area Law
 #block(
   fill: box_color,
@@ -102,28 +99,28 @@ Projected Entangled Pair States (PEPS) are a class of tensor network states that
 )
 This is in constrast with the volume law most states follow.
 
-Given the Schmidt decomposition of a state $|Psi angle.r$ across a bipartition of the system into the "In" system $cal(A)$ and the "Out" system $cal(B)$:
+Given the Schmidt decomposition of a state $|Psi angle.r$ across a bipartition of the system into the "In" system $cal(A)$ and the "Out" system $cal(B)$ (where $sum_i lambda^2_i = 1$):
 
 $ |Psi angle.r = sum_i lambda_i |I_i angle.r times.circle |O_i angle.r $
 
-The entanglement entropy of the region $cal(A)$ is given by (where $sum_i lambda^2_i = 1$):
+The entanglement entropy of the region $cal(A)$ is given by:
 $ S_(cal(A)) = - sum_i lambda^2_i log(lambda^2_i) $
 The maximal value this can take is when all the $lambda_i = 1/N_S$, with $N_S$ the Schmidt rank.
-For finitely entangled systems this is bounded by the finite Schmidt rank $N_S$.
+For finitely entangled systems, $S_(cal(A))$ is thus bounded by the finite Schmidt rank $N_S$.
 $ S_(cal(A)) <= log(N_S) $
+
+It turns out that PEPS satisfy an *area law* for their entanglement entropy *by construction*. This property makes PEPS an efficient representation of quantum states with finite (local) entanglement.
 
 #figure(
   image("./images/area-law.svg", 
         width: 40%),
 )
 
-It turns out that PEPS satisfy an *area law* for their entanglement entropy *by construction*. This property makes PEPS an efficient representation of quantum states with finite (local) entanglement.
-
 The entanglement entropy of the shaded area $cal(A)$ is the sum of the entanglement entropy across the cut virtual bonds, which by construction all have a finite bond dimension (and Schmidt rank) $chi$.
 
 The entanglement entropy of a single cut is bounded by $log(chi)$. The total entanglement entropy of the region $cal(A)$ is thus proportional to the number of cut virtual bonds times $log(chi)$.
 
-$ S_(cal(A)) ~ log(chi) dot.c partial cal(A) $
+$ S_(cal(A)) #h(10pt) ~ #h(10pt) log(chi) dot.c partial cal(A) $
 
 = Parent Hamiltonians
 #block(

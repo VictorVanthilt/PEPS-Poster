@@ -87,7 +87,7 @@
     width: width,
     height: height,
     margin: 
-      (top: 3cm, left: 2cm, right: 2cm, bottom: 4cm),
+      (top: 1.5cm, left: 1.5cm, right: 1.5cm, bottom: 4cm),
     footer: [
       #set align(center)
       #set text(32pt)
@@ -133,7 +133,7 @@
       #set align(center)
       #set text({ 32pt })
       #show: smallcaps
-      #v(50pt, weak: true)
+      #v(30pt, weak: true)
       #if it.numbering != none {
         numbering("I.", deepest)
         h(7pt, weak: true)
