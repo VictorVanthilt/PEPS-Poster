@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38pt" height="38pt" viewBox="0 0 38 38" version="1.1">
+<g id="surface1">
+<path style=" stroke:none;fill-rule:evenodd;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 4.5 3 C 4.5 1 1.5 1 1.5 3 C 1.5 5 4.5 5 4.5 3 Z M 4.5 3 "/>
+<path style=" stroke:none;fill-rule:evenodd;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 4.800781 3 C 4.800781 0.601562 1.199219 0.601562 1.199219 3 C 1.199219 5.398438 4.800781 5.398438 4.800781 3 Z M 4.199219 3 C 4.199219 1.398438 1.800781 1.398438 1.800781 3 C 1.800781 4.601562 4.199219 4.601562 4.199219 3 Z M 4.199219 3 "/>
+<path style=" stroke:none;fill-rule:evenodd;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 36.5 3 C 36.5 1 33.5 1 33.5 3 C 33.5 5 36.5 5 36.5 3 Z M 36.5 3 "/>
+<path style=" stroke:none;fill-rule:evenodd;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 36.800781 3 C 36.800781 0.601562 33.199219 0.601562 33.199219 3 C 33.199219 5.398438 36.800781 5.398438 36.800781 3 Z M 36.199219 3 C 36.199219 1.398438 33.800781 1.398438 33.800781 3 C 33.800781 4.601562 36.199219 4.601562 36.199219 3 Z M 36.199219 3 "/>
+<path style=" stroke:none;fill-rule:evenodd;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 4.5 35 C 4.5 33 1.5 33 1.5 35 C 1.5 37 4.5 37 4.5 35 Z M 4.5 35 "/>
+<path style=" stroke:none;fill-rule:evenodd;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 4.800781 35 C 4.800781 32.601562 1.199219 32.601562 1.199219 35 C 1.199219 37.398438 4.800781 37.398438 4.800781 35 Z M 4.199219 35 C 4.199219 33.398438 1.800781 33.398438 1.800781 35 C 1.800781 36.601562 4.199219 36.601562 4.199219 35 Z M 4.199219 35 "/>
+<path style=" stroke:none;fill-rule:evenodd;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 36.5 35 C 36.5 33 33.5 33 33.5 35 C 33.5 37 36.5 37 36.5 35 Z M 36.5 35 "/>
+<path style=" stroke:none;fill-rule:evenodd;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 36.800781 35 C 36.800781 32.601562 33.199219 32.601562 33.199219 35 C 33.199219 37.398438 36.800781 37.398438 36.800781 35 Z M 36.199219 35 C 36.199219 33.398438 33.800781 33.398438 33.800781 35 C 33.800781 36.601562 36.199219 36.601562 36.199219 35 Z M 36.199219 35 "/>
+<path style="fill:none;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M 160 732 L 160 708 " transform="matrix(1,0,0,-1,-157,739)"/>
+<path style="fill:none;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M 164 736 L 188 736 " transform="matrix(1,0,0,-1,-157,739)"/>
+<path style="fill:none;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M 192 732 L 192 708 " transform="matrix(1,0,0,-1,-157,739)"/>
+<path style="fill:none;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M 164 704 L 188 704 " transform="matrix(1,0,0,-1,-157,739)"/>
+</g>
+</svg>
