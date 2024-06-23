@@ -28,6 +28,8 @@
 #set text(size: 22pt)
 
 #let box_color = luma(200)
+#let block_stroke = 2pt
+#let peps_fig_scale = 50%
 
 = Definition
 Projected Entangled Pair States (PEPS) are a class of tensor network states that efficiently parametrise quantum states with finite entanglement. They are a generalization of Matrix Product States (MPS).
@@ -42,7 +44,7 @@ Projected Entangled Pair States (PEPS) are a class of tensor network states that
   [
     #figure(
       image("./images/graph.svg", 
-            width: 50%),
+            width: peps_fig_scale),
     )
   ],
   [
@@ -51,7 +53,7 @@ Projected Entangled Pair States (PEPS) are a class of tensor network states that
   [
     #figure(
       image("./images/ancillae.svg", 
-            width: 50%),
+            width: peps_fig_scale),
     )
   ],
   [
@@ -60,7 +62,7 @@ Projected Entangled Pair States (PEPS) are a class of tensor network states that
   [
     #figure(
       image("./images/entangled-ancillae.svg", 
-            width: 50%),
+            width: peps_fig_scale),
     )
   ],
   [
@@ -69,7 +71,7 @@ Projected Entangled Pair States (PEPS) are a class of tensor network states that
   [
     #figure(
       image("./images/projected-entangled-ancillae.svg", 
-            width: 50%),
+            width: peps_fig_scale),
     )
   ],
   [
@@ -79,7 +81,7 @@ Projected Entangled Pair States (PEPS) are a class of tensor network states that
   [
     #figure(
       image("./images/peps-network.svg", 
-            width: 50%),
+            width: peps_fig_scale),
     )
   ]
 )
@@ -90,7 +92,7 @@ Projected Entangled Pair States (PEPS) are a class of tensor network states that
   fill: box_color,
   inset: 10pt,
   radius: 8pt,
-  stroke: 1pt,
+  stroke: block_stroke,
   [*Entanglement Area Law*
   
   The entanglement entropy of a region $cal(A)$ of quantum state with finite (local) entanglement scales as $partial cal(A)$, the boundary of $cal(A)$.
@@ -129,7 +131,7 @@ $ S_(cal(A)) #h(10pt) ~ #h(10pt) log(chi) dot.c partial cal(A) $
   fill: box_color,
   inset: 10pt,
   radius: 8pt,
-  stroke: 1pt,
+  stroke: block_stroke,
   [*Parent Hamiltonians for PEPS*
 
     Every injective PEPS is the unique ground state of a _local_, _frustration free_ parent Hamiltonian.
@@ -167,18 +169,19 @@ The Hamiltonian is _local_ since it is the sum of local terms $h_v$ acting on th
   fill: box_color,
   inset: 10pt,
   radius: 8pt,
-  stroke: 1pt,
+  stroke: block_stroke,
   [
-    COMPUTATION OF EXPECTATION VALUES????????? 
+    Placeholder text
   ]
 )
+The computation of local e
 
 = Computational complexity of PEPS contractions
 #block(
   fill: box_color,
   inset: 10pt,
   radius: 8pt,
-  stroke: 1pt,
+  stroke: block_stroke,
   [
     How Complex are these peps really? It can't be that NP-Hard.
   ]
