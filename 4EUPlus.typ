@@ -218,14 +218,19 @@ There exist many strategies for the approximate calculation of the contraction o
 
 *Finite Systems*
 
-By reducing the inherently 2D problem to a series of 1D (MPS) problems, MPS methods like DMRG or TEBD can be used to approximate the contraction of PEPS. The time complexity of such a contraction is $cal(O)(N p^2 chi^2 D^6 )$
+Boundary Matrix Product State (MPS) methods are an efficient technique for contracting finite Projected Entangled Pair States (PEPS), transforming the 2D contraction problem into a sequence of 1D contractions.
 
 *Infinite Systems*
 
 There exist several methods for the contraction of infinite PEPS. These include:
-+ Boundary MPS methods
-+ Corner Transfer Matrix methods (CTM)
-+ Coarse-graining methods
+== Boundary MPS methods
+Boundary MPS methods transform the 2D contraction problem into a series of 1D contractions by representing the boundary of the PEPS as a Matrix Product State (MPS). The time complexity typically scales as $cal(O)(chi^(2N) + chi^3 L)$, where $L$ is the boundary length. These methods strike a balance between accuracy and computational feasibility, making them suitable for relatively large systems.
+
+== Corner Transfer Matrix methods (CTM)
+CTM methods approximate the environment tensors using corner and edge transfer matrices. These matrices are iteratively refined, with a typical time complexity of $cal(O)(chi^10)$. CTM methods are particularly effective for large systems and are widely used to study critical phenomena.
+
+== Tensor Renormalization Group methods (TRG)
+Coarse-graining methods, such as Tensor Renormalization Group (TRG), reduce the tensor network size while preserving essential features. These methods involve iterative tensor decompositions and contractions, generally scaling as $cal(O)(chi^6)$. They are particularly useful for extracting long-range properties in large-scale systems.
 
 // #block(
 //   fill: box_color,
