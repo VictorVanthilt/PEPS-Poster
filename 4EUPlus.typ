@@ -32,7 +32,7 @@
 #let peps_fig_scale = 50%
 
 = Definition
-Projected Entangled Pair States (PEPS) are a class of tensor network states that efficiently parametrise quantum states with finite entanglement. They are a generalization of Matrix Product States (MPS).
+Projected Entangled Pair States (PEPS) are a class of tensor network states that efficiently parametrise quantum states with finite entanglement. They are a generalization of (1D) Matrix Product States (MPS) to arbitrary dimension.
 
 #align(horizon)[
 #grid(
@@ -99,7 +99,6 @@ Projected Entangled Pair States (PEPS) are a class of tensor network states that
   $ S_(cal(A)) #h(10pt)~#h(10pt) partial cal(A) $
   ],
 )
-
 This is in constrast with the volume law most states follow.
 
 Given the Schmidt decomposition of a state $|Psi angle.r$ across a bipartition of the system into the "In" system $cal(A)$ and the "Out" system $cal(B)$ (where $sum_i lambda^2_i = 1$):
@@ -119,6 +118,20 @@ It turns out that PEPS satisfy an *area law* for their entanglement entropy *by 
         width: 40%),
 )
 
+// #grid(
+//   columns: (8fr, 5fr),
+//   [
+// The entanglement entropy of the shaded area $cal(A)$ is the sum of the entanglement entropy across the cut virtual bonds, which by construction all have a finite bond dimension (and Schmidt rank) $chi$.
+// #v(10pt)
+// The entanglement entropy of a single cut is bounded by $log(chi)$. The total entanglement entropy of the region $cal(A)$ is thus proportional to the number of cut virtual bonds times $log(chi)$.
+//   ],
+//   [
+// #figure(
+//   image("./images/area-law.svg", 
+//         width: 90%),
+// )
+//   ],
+// )
 The entanglement entropy of the shaded area $cal(A)$ is the sum of the entanglement entropy across the cut virtual bonds, which by construction all have a finite bond dimension (and Schmidt rank) $chi$.
 
 The entanglement entropy of a single cut is bounded by $log(chi)$. The total entanglement entropy of the region $cal(A)$ is thus proportional to the number of cut virtual bonds times $log(chi)$.
@@ -151,30 +164,28 @@ since by construction $tr(rho_(cal(A))h) = 0$.
 The Hamiltonian can be extended to the entire lattice by assigning a region $cal(R)_v$ to every vertex $v$ of the lattice and defining
 $ H = sum_v h_v times.circle bb(1) $
 
-The Hamiltonian is _local_ since it is the sum of local terms $h_v$ acting on the region $cal(R)_v$, and it is _frustration free_ since every term $h_v$ is minimized by the PEPS.
+The Hamiltonian is _local_ since it is the sum of local terms $h_v$ acting on bounded regions $cal(R)_v$, and it is _frustration free_ since every term $h_v$ is minimized by the PEPS.
 
-[*Perez-Garcia et. al. 2007*]
+*Examples*
 
+Many examples exist of the rather formal Parent Hamiltonian theorem. The groundstates of the following Hamiltonians can all be exactly expressed as PEPS.
++ The toric code
++ The 2d AKLT model
+[*Perez-Garcia et. al. 2007*, *Orus 2014*]
+
+// = Computation of local expectation values
 // #block(
-//   fill: rgb(footer_color),
+//   fill: box_color,
 //   inset: 10pt,
 //   radius: 8pt,
-//   stroke: 1pt,
+//   stroke: block_stroke,
 //   [
-//     #text(size: 35pt, smallcaps("4EU+ Quantum Information and Quantum Many-Body Theory"))
+//     *Computation of local expectation values*
+
+//     Calculating expectation values of local observables is exponentially hard. Therefore approximate contractions are commonly used. 
 //   ]
 // )
-= Computation of local expectation values
-#block(
-  fill: box_color,
-  inset: 10pt,
-  radius: 8pt,
-  stroke: block_stroke,
-  [
-    Placeholder text
-  ]
-)
-The computation of local e
+// The computation of local e
 
 = Computational complexity of PEPS contractions
 #block(
@@ -183,6 +194,48 @@ The computation of local e
   radius: 8pt,
   stroke: block_stroke,
   [
-    How Complex are these peps really? It can't be that NP-Hard.
+    *Exact PEPS contraction is \#P-Hard*
+
+    The exact calculation of the scalar product between two PEPS is an exponentially hard problem.
   ]
 )
+
+#grid(
+  align: horizon,
+  columns: (8fr, 3fr),
+  column-gutter: 10pt,
+  [For two arbitrary PEPS of N sites, it will always take a time $cal(O)(exp(N))$, no matter the contraction order.
+
+Because in general _no canonical forms exist for PEPS_, calculating expecation values efficiently requires an approximate approach.
+
+There exist many strategies for the approximate calculation of the contraction of PEPS which differ for finite and infinite systems.
+],
+  figure(
+    image("./images/expecation-value.svg", 
+          width: 100%),
+  )
+)
+
+*Finite Systems*
+
+By reducing the inherently 2D problem to a series of 1D (MPS) problems, MPS methods like DMRG or TEBD can be used to approximate the contraction of PEPS. The time complexity of such a contraction is $cal(O)(N p^2 chi^2 D^6 )$
+
+*Infinite Systems*
+
+There exist several methods for the contraction of infinite PEPS. These include:
++ Boundary MPS methods
++ Corner Transfer Matrix methods (CTM)
++ Coarse-graining methods
+
+// #block(
+//   fill: box_color,
+//   inset: 10pt,
+//   radius: 8pt,
+//   stroke: block_stroke,
+//   [
+//     *Effective environments*
+
+//     All the methods to compute expectation values of 2d systems are based on techniques to compute effective environments of different sites.
+//   ]
+
+// )

@@ -175,6 +175,8 @@
       text(20pt, "Ghent University, Università degli Studi di Milano, Kharkiv Institute of Physics and Technology")),
     )
   )
+  v(-2cm)
+
   // Start three column mode and configure paragraph properties.
   show: columns.with(num_columns, gutter: 64pt)
   set par(justify: true, first-line-indent: 0em)
