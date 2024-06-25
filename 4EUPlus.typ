@@ -32,7 +32,7 @@
 #let peps_fig_scale = 50%
 
 = Definition
-Projected Entangled Pair States (PEPS) are a class of tensor network states that efficiently parametrise quantum states with finite entanglement. They are a generalization of (1D) Matrix Product States (MPS) to arbitrary dimension.
+Projected Entangled Pair States (PEPS) are a generalization of MPS to one and higher dimensions. They are explicitly constructed such as to mimic the entanglement structure of ground states of local quantum Hamiltonians: they have strong local correlations, possess all the symmetries of the problem, and obey an area law of their entanglement entropy.
 
 #align(horizon)[
 #grid(
@@ -99,7 +99,7 @@ Projected Entangled Pair States (PEPS) are a class of tensor network states that
   $ S_(cal(A)) #h(10pt)~#h(10pt) partial cal(A) $
   ],
 )
-This is in constrast with the volume law most states follow.
+This is in constrast with the volume law  Haar-distributed states follow.
 
 Given the Schmidt decomposition of a state $|Psi angle.r$ across a bipartition of the system into the "In" system $cal(A)$ and the "Out" system $cal(B)$ (where $sum_i lambda^2_i = 1$):
 
@@ -232,6 +232,7 @@ CTM methods approximate the environment tensors using corner and edge transfer m
 == Tensor Renormalization Group methods (TRG)
 Coarse-graining methods, such as Tensor Renormalization Group (TRG), reduce the tensor network size while preserving essential features. These methods involve iterative tensor decompositions and contractions, generally scaling as $cal(O)(chi^6)$. They are particularly useful for extracting long-range properties in large-scale systems.
 
+[*Orus 2014*]
 // #block(
 //   fill: box_color,
 //   inset: 10pt,
